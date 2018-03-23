@@ -1,0 +1,57 @@
+﻿@model Wardrobe.Models.Accessory
+
+@{
+    ViewBag.Title = "Details of Accessories";
+}
+
+<h2 class="leader">Details of Accessories</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal detailscontainer">
+        <dt>
+            @Html.DisplayNameFor(model => model.AccName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccName)
+        </dd>
+
+        <dt>
+           
+        </dt>
+
+        <dd>
+            <img class="clothespix" src="@Html.DisplayFor(model => model.AccPic)"/>
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AccColor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AccColor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Occasion.OccName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Occasion.OccName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Season.SeasonName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Season.SeasonName)
+        </dd>
+
+    </dl>
+</div>
+<p class="btn btn-default">
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AccID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

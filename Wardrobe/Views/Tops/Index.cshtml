@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Wardrobe.Models.Top>
+
+@{
+    ViewBag.Title = "Index of Tops";
+}
+
+<h2 class="leader">Index of Tops</h2>
+
+<p class="btn btn-default">
+    @Html.ActionLink("Create New", "Create")
+</p>
+<p></p>
+<div class="row clothescontainer">
+    @foreach (var item in Model)
+    {
+        <div class="col-sm-6 col-md-4 ">
+            <div class="thumbnail reviewthumb">
+                <div class="caption">
+                    <p> @Html.DisplayNameFor(model => model.TopName):@Html.DisplayFor(modelItem => item.TopName)</p>
+                    <p>@Html.DisplayNameFor(model => model.TopColor):@Html.DisplayFor(modelItem => item.TopColor)</p>
+                    <p>@Html.DisplayNameFor(model => model.Occasion.OccName):@Html.DisplayFor(modelItem => item.Occasion.OccName)</p>
+                    <p>@Html.DisplayNameFor(model => model.Season.SeasonName): @Html.DisplayFor(modelItem => item.Season.SeasonName)</p>
+                    <p> <img class="clothespix" src="@Html.DisplayFor(modelItem => item.TopPic)"/></p>
+                    <p class="btn btn-default">
+                        @Html.ActionLink("Edit", "Edit", new { id = item.TopID }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.TopID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.TopID })
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+    </div>
