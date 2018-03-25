@@ -36,7 +36,10 @@
         @RenderBody()
         <hr />
         <footer class="footer">
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p  onmouseover="overTxt(this)" onmouseout="outTxt(this)">
+                &copy; @DateTime.Now.Year - My ASP.NET Application
+               
+            </p>
         </footer>
     </div>
 

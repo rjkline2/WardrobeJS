@@ -1,13 +1,14 @@
 ﻿
-    function overBtn(x) {
-        x.style.backgroundColor = "white";
-    x.style.color = "black";
+    function overTxt(x) {
+        x = "&copy; 2018- RJ Kline";
+    
     }
 
-    function outBtn(x) {
-        x.style.backgroundColor = "#474e5d";
-    x.style.color = "white";
-    }
+    function outTxt(x) {
+        x = "&copy; 2018 - My ASP.NET Application"
+}
+    
+
     function SwapDivsWithClick(div1, div2) {
         d1 = document.getElementById(div1);
         d2 = document.getElementById(div2);
