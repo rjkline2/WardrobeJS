@@ -247,6 +247,7 @@
       <DependentUpon>Wardrobe.edmx</DependentUpon>
       <LastGenOutput>Wardrobe.cs</LastGenOutput>
     </Content>
+    <Content Include="README.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <EntityDeploy Include="Models\Wardrobe.edmx">

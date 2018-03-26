@@ -62,3 +62,21 @@ function GetVilla() {
         x.getElementsByTagName('p')[1].innerText = 'Sorry we have no villas available';
     }
 }
+function addOption(selectbox, text, value) {
+    var optn = document.createElement("OPTION");
+    optn.text = text;
+    optn.value = value;
+    selectbox.options.add(optn);
+}
+
+function addOption_list() {
+    var month = new Array("January", "February", "March", "April", "May", "June", "July", "August",
+        "September", "October", "November", "December");
+    for (var i = 0; i < month.length; ++i) {
+        addOption(document.drop_list.Month_list, month[i], month[i]);
+        if (i == dt_month) { document.drop_list.Month_list.options[i].selected = true; }
+    }
+}
+function myFunction() {
+    alert("Can play through video without stopping");
+}
